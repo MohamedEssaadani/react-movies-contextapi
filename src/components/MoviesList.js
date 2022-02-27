@@ -1,11 +1,20 @@
 import React, { Component } from "react";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 class MoviesList extends Component {
+  // inject the shared state to this.context property
+  static contextType = ThemeContext;
   render() {
+    // destructuring context
+    const { isLightTheme, light, dark } = this.context;
+
+    // theme to use
+    const theme = isLightTheme ? light : dark;
+
     return (
-      <div className="movies-list">
+      <div className="movies-list" style={{ background: theme.bg }}>
         <ul>
-          <li>
+          <li style={{ background: theme.ui }}>
             <h3>Interstellar</h3>
             <p>
               Interstellar is a 2014 epic science fiction film co-written,
@@ -15,7 +24,7 @@ class MoviesList extends Component {
               search of a new home for mankind.
             </p>
           </li>
-          <li>
+          <li style={{ background: theme.ui }}>
             <h3>Taken</h3>
             <p>
               A retired CIA agent travels across Europe and relies on his old
@@ -24,7 +33,7 @@ class MoviesList extends Component {
               is the pride and joy of her father Bryan Mills.
             </p>
           </li>
-          <li>
+          <li style={{ background: theme.ui }}>
             <h3>The Matrix</h3>
             <p>
               The film describes a future in which reality perceived by humans
@@ -34,7 +43,7 @@ class MoviesList extends Component {
               source.
             </p>
           </li>
-          <li>
+          <li style={{ background: theme.ui }}>
             <h3>Jhon Wick</h3>
             <p>
               John Wick is a fictional character and the titular protagonist of
