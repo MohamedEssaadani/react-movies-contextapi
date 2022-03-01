@@ -49,3 +49,12 @@ nav ul li {
 .movies-list li h3 {
   color: #17c484;
 }
+
+.toggleTheme {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #17c484;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+}

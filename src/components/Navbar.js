@@ -5,7 +5,6 @@ class Navbar extends Component {
   // inject the shared state to this.context property
   static contextType = ThemeContext;
   render() {
-    console.log(this.context);
     // destructuring context
     const { isLightTheme, light, dark } = this.context;
 
