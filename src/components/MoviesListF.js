@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import { MoviesContext } from "../contexts/MoviesContext";
+import MoviesContextProvider, {
+  MoviesContext,
+} from "../contexts/MoviesContext";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 const MoviesListF = () => {

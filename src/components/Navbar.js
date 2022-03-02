@@ -1,4 +1,5 @@
-import React, { Component, useContext } from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../contexts/ThemeContext";
 
 // class Navbar extends Component {
@@ -39,9 +40,15 @@ export const Navbar = () => {
     <nav style={{ backgroundColor: theme.bg, color: theme.syntax }}>
       <h1>Movies App</h1>
       <ul>
-        <li>Home</li>
-        <li>Contact</li>
-        <li>About</li>
+        <Link className="link" to={"/movies"}>
+          Home
+        </Link>
+        <Link className="link" to={"/new-movie"}>
+          Add Movie
+        </Link>
+        <Link className="link" to={"/movies"}>
+          All Movies
+        </Link>
       </ul>
     </nav>
   );
