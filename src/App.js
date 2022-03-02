@@ -1,6 +1,7 @@
-import MoviesList from "./components/MoviesList";
+import MoviesListF from "./components/MoviesListF";
 import Navbar from "./components/Navbar";
 import ThemeToggle from "./components/ThemeToggle";
+import MoviesContextProvider from "./contexts/MoviesContext";
 import ThemeContextProvider from "./contexts/ThemeContext";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
     <div className="App">
       <ThemeContextProvider>
         <Navbar />
-        <MoviesList />
+        <MoviesContextProvider>
+          <MoviesListF />
+        </MoviesContextProvider>
         <ThemeToggle />
       </ThemeContextProvider>
     </div>
