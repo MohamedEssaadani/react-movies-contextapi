@@ -42,7 +42,7 @@ nav ul .link {
   list-style-type: none;
 }
 
-.movies-list li {
+.movies-list ul li {
   padding: 10px;
   margin: 10x auto;
   border-radius: 10px;

@@ -1,5 +1,4 @@
-import { Outlet, Route, Routes } from "react-router-dom";
-import MoviesList from "./components/MoviesList";
+import { Route, Routes } from "react-router-dom";
 import MoviesListF from "./components/MoviesListF";
 import Navbar from "./components/Navbar";
 import ThemeToggle from "./components/ThemeToggle";
@@ -17,7 +16,6 @@ function App() {
             <Route path="/movies" element={<MoviesListF />} />
           </Routes>
         </MoviesContextProvider>
-
         <ThemeToggle />
       </ThemeContextProvider>
     </div>

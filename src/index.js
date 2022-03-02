@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import MoviesListF from "./components/MoviesListF";
 
 ReactDOM.render(
   <BrowserRouter>
